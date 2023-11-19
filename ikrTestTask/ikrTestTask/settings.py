@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'university',
+    'django_seed',
 ]
 
 MIDDLEWARE = [
@@ -122,8 +124,6 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
 # Overriding this settings.py file with local settings
-try:
-    from local_settings import *
-except ImportError:
-    pass
+from .local_settings import *
